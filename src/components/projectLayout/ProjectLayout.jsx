@@ -4,7 +4,7 @@ import ConnectingLines from './ConnectingLines'
 import ProjectCard from './ProjectCard'
 import { useAnimationControls } from 'framer-motion';
 
-const ProjectLayout = ({ title, description, img, color, direction }) => {
+const ProjectLayout = ({ title, description, img, color, direction, date }) => {
   const controls = useAnimationControls();
   const colorVariants = {
     "white": "#fff",
@@ -18,6 +18,12 @@ const ProjectLayout = ({ title, description, img, color, direction }) => {
     "orange": "bg-orange-600",
     "darkCyan": "bg-cyan-800"
   }
+  const textColorVariants = {
+    "white": "text-white",
+    "limeGreen": "text-[#bada55]",
+    "orange": "text-orange-600",
+    "darkCyan": "text-cyan-800"
+  }
   const textHoverColorVariants = {
     "white": "hover:text-white",
     "limeGreen": "hover:text-[#bada55]",
@@ -30,13 +36,15 @@ const ProjectLayout = ({ title, description, img, color, direction }) => {
   // I guess I'll have to stick with this repeatitive code till I find a way out
   const colorCode = colorVariants[color] ? colorVariants[color] : "#fff"
   return (
-    <div className=''>
+    <div>
         <ProjectStar 
             controls={controls}
             bgColorVariants={bgColorVariants}
+            textColorVariants={textColorVariants}
             ColorVariants={colorVariants}
             colorCode={colorCode}
             color={color}
+            date={date}
             direction={direction}>
 
             <ConnectingLines colorCode={colorCode}

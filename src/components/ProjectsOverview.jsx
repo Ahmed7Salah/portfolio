@@ -13,6 +13,7 @@ const ProjectsOverview = () => {
         description="Efficient routing and navigation for Expo and SupraFlow applications."
         color="white"
         direction={"bottomRight"}
+        date="August 2024"
       />
       <ProjectLayout
         img={require("../assets/projects/supraflow.png")} 
@@ -20,6 +21,7 @@ const ProjectsOverview = () => {
         description="Efficient routing and navigation for Expo and SupraFlow applications."
         color="limeGreen"
         direction="bottomLeft"
+        date="August 2024"
       />
       
     </div>

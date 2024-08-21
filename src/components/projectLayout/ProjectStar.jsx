@@ -1,15 +1,19 @@
 import { motion } from "framer-motion"
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 
-const ProjectStar = ( { controls, children, color, bgColorVariants, colorCode, direction }) => {
+const ProjectStar = ( { controls, children, color, bgColorVariants, colorCode, direction, date, textColorVariants }) => {
     const directions = {
         "bottomLeft": "justify-end",
         "bottomRight": "justify-start",
     }
-    
+    const [dateTyped] = useTypewriter({
+        words: [date],
+        typeSpeed: 50,
+      })
   return (
     <>
     <motion.div className={`relative ${bgColorVariants[color] ? bgColorVariants[color] : "bg-white" }
-    rounded-full size-star shadow-orange-700 flex ${directions[direction] ? directions[direction] : directions["bottomRight"]}`}
+    rounded-full size-star flex ${directions[direction] ? directions[direction] : directions["bottomRight"]}`}
         animate={{
             boxShadow: [`0 0 10px 2px ${colorCode}`, `0 0 15px 6px ${colorCode}`,  `0 0 20px 10px ${colorCode}`, `0 0 30px 15px ${colorCode}`, `0 0 20px 10px ${colorCode}`, `0 0 15px 6px ${colorCode}`, `0 0 10px 2px ${colorCode}`],
         }}
@@ -25,14 +29,17 @@ const ProjectStar = ( { controls, children, color, bgColorVariants, colorCode, d
         <motion.div className='absolute top-0 left-0 z-10 rounded-full cursor-pointer size-star' 
         onHoverStart={() => controls.start("dramaticAppearance")}
         />
+
+        {/* Project Date */}
+        <motion.div className={`absolute text-xs ${textColorVariants[color] ? textColorVariants[color] : "bg-white" } top-4 -left-6 text-nowrap`}>
+            {dateTyped}
+        </motion.div>
+
         <motion.div className='bg-transparent opacity-0'
             transition={{
                 duration: 0.5,
             }}
             variants={{
-                initial: {
-                opacity: 0
-                },
                 dramaticAppearance: {
                 opacity: 1,
                 display: "block"
