@@ -4,5 +4,6 @@ import commonjs from 'vite-plugin-commonjs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), commonjs()]
+  plugins: [react(), commonjs()],
+  base: "/portfolio/"
 })
