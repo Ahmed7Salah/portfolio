@@ -1,5 +1,5 @@
 import React from 'react'
-import SkillCard from './skills/skillCard'
+import SkillCard from './skills/SkillCard'
 
 const SkillsOverview = () => {
   return (
