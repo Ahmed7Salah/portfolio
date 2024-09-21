@@ -4,11 +4,11 @@ import { Stage, Line, Layer } from "konva"
 
 const ConnectingLines = ({ colorCode, direction }) => {
   const id = Math.floor(Math.random() * 100)
-  const width = 272
+  const width = 292
   const height = 50
   const directions = {
-    "bottomLeft": [width, 6, width - 40, 6, width - 85, 51],
-    "bottomRight": [3, 6, 40, 6, 85, 51]
+    "bottomLeft": [width, 6, width - 40, 6, width - 85, height + 1],
+    "bottomRight": [3, 6, 40, 6, 85, height + 1]
   }
   
   const points = directions[direction] ? directions[direction] : directions["bottomRight"];

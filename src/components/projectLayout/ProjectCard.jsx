@@ -15,7 +15,7 @@ const ProjectCard = ({ controls, title, description, img, color, bgColorVariants
     onLoopDone: () => controls.start("spawn")
   })
   return (
-      <motion.div className={`flex flex-col ${bgColorVariants[color] ? bgColorVariants[color] : "bg-white" } 
+      <motion.div className={`flex flex-col ${bgColorVariants[color] ? bgColorVariants[color] : "bg-white/85" } 
       justify-around px-4 py-2 text-center rounded-md w-project h-project`}>
           {/* Hide cursor when done typing */}
           <h1 className='text-lg font-bold'>{titleTyped}{titleHelper.isDone ? '' : <Cursor />}</h1>
@@ -46,7 +46,7 @@ const ProjectCard = ({ controls, title, description, img, color, bgColorVariants
           >
             {/* Preview Button */}
             <motion.div className={`absolute z-10 w-32 h-10 pt-1 font-bold border-2 border-black rounded-full opacity-0
-            hover:bg-black ${textHoverColorVariants[color] ? textHoverColorVariants[color] : "hover:text-white" }`}
+            hover:bg-black ${textHoverColorVariants[color] ? textHoverColorVariants[color] : "hover:text-white/85" }`}
             transition={{
               duration: 0.2,
             }}
