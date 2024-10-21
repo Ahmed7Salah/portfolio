@@ -6,7 +6,7 @@ const NavBar = () => {
     <div className="sticky top-0 z-40 flex justify-center w-full h-12 text-gray-300 bg-black">
       <div className="grid items-center w-5/6 grid-cols-3 border-b-2 border-gray-700/50 ">
         {/* logo and handle container */}
-        <div className="flex items-center justify-center col-start-2 space-x-3 cursor-pointer">
+        <div className="flex items-center justify-center col-start-2 space-x-3">
           {/* <img src={require("../assets/logo.png")} alt="logo"
           className="h-11" /> */}
           <h1 className="text-2xl font-bold">Ahmed Salah</h1>

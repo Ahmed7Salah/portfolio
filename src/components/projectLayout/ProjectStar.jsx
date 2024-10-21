@@ -27,15 +27,15 @@ const ProjectStar = ( { controls, children, color, bgColorVariants, colorCode, d
         onHoverEnd={() => controls.start("dramaticDisappearacne")}
         >
         <motion.div className='absolute top-0 left-0 z-10 rounded-full cursor-pointer size-star' 
-        onHoverStart={() => controls.start("dramaticAppearance")}
+            onHoverStart={() => controls.start("dramaticAppearance")}
         />
 
         {/* Project Date */}
-        <motion.div className={`absolute text-xs ${textColorVariants[color] ? textColorVariants[color] : "bg-white/85" } top-5 -left-8 text-nowrap`}>
+        <motion.div className={`pointer-events-none absolute text-xs ${textColorVariants[color] ? textColorVariants[color] : "bg-white/85" } top-5 -left-8 text-nowrap`}>
             {dateTyped}
         </motion.div>
 
-        <motion.div className='justify-end bg-transparent opacity-0'
+        <motion.div className='bg-transparent opacity-0'
             transition={{
                 duration: 0.5,
             }}
@@ -49,7 +49,8 @@ const ProjectStar = ( { controls, children, color, bgColorVariants, colorCode, d
                 display: "none",
                 }
             }}
-            animate={controls}>
+            animate={controls}
+            >
             {children}
         </motion.div>
     </motion.div>

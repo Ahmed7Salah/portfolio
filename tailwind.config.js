@@ -10,10 +10,10 @@ export default {
         "star": "0.75rem",
       },
       "width": {
-        "project": "19rem"
+        "project": "22rem"
       },
       "height": {
-        "project": "13rem"
+        "project": "16rem"
       },
       "fontFamily": {
         "primary": [ "'Fira Code'", "monospace" ]

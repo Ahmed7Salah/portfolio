@@ -1,13 +1,15 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 
 
-const ProjectCard = ({ controls, title, description, img, color, bgColorVariants, textHoverColorVariants }) => {
+const ProjectCard = ({ controls, title, description, img, color, bgColorVariants, textHoverColorVariants, link }) => {
   // Project title typewriter
   const [titleTyped, titleHelper] = useTypewriter({
     words: [`Project Name: ${title}`],
     typeSpeed: 10,
   })
+
   // Project description typewriter
   const [descriptionTyped, descriptionHelper]  = useTypewriter({
     words: [description],
@@ -24,8 +26,7 @@ const ProjectCard = ({ controls, title, description, img, color, bgColorVariants
           <p className='text-sm'><span>{descriptionTyped}</span>{descriptionHelper.isDone || !descriptionHelper.isType ? '' : <Cursor />} </p>
 
           {/* Preview link */}
-          <motion.a href="supraflow.com"
-          target='_blank'
+          <motion.a
           className='flex justify-center cursor-pointer'
           onHoverStart={() => controls.start("hovered")}
           onHoverEnd={() => controls.start("unhovered")}
@@ -45,21 +46,23 @@ const ProjectCard = ({ controls, title, description, img, color, bgColorVariants
             }}
           >
             {/* Preview Button */}
-            <motion.div className={`absolute z-10 w-32 h-10 pt-1 font-bold border-2 border-black rounded-full opacity-0
-            hover:bg-black ${textHoverColorVariants[color] ? textHoverColorVariants[color] : "hover:text-white/85" }`}
-            transition={{
-              duration: 0.2,
-            }}
-            variants={{
-              hovered: {
-                x: "0px",
-                opacity: 1,
-              },
-              unhovered: {
-                x: "-20px",
-                opacity: 0,
-              }}}
-              animate={controls}>Preview</motion.div>
+            <Link to={link} target='_blank'>
+              <motion.div className={`absolute z-10 w-32 h-10 pt-1 font-bold border-2 border-black rounded-full opacity-0
+              hover:bg-black ${textHoverColorVariants[color] ? textHoverColorVariants[color] : "hover:text-white/85" }`}
+              transition={{
+                duration: 0.2,
+              }}
+              variants={{
+                hovered: {
+                  x: "0px",
+                  opacity: 1,
+                },
+                unhovered: {
+                  x: "-20px",
+                  opacity: 0,
+                }}}
+                animate={controls}>Preview</motion.div>
+            </Link>
 
             {/* Project Logo */}
             <motion.div

@@ -2,13 +2,14 @@ import { useEffect } from "react";
 import { Stage, Line, Layer } from "konva"
 
 
-const ConnectingLines = ({ colorCode, direction }) => {
+const ConnectingLines = ({ colorCode, direction, className }) => {
   const id = Math.floor(Math.random() * 100)
-  const width = 292
+  const width = 340
   const height = 50
   const directions = {
     "bottomLeft": [width, 6, width - 40, 6, width - 85, height + 1],
-    "bottomRight": [3, 6, 40, 6, 85, height + 1]
+    "bottomRight": [3, 6, 40, 6, 85, height + 1],
+    "straight": [12, 25, 335, 25]
   }
   
   const points = directions[direction] ? directions[direction] : directions["bottomRight"];
@@ -44,7 +45,7 @@ const ConnectingLines = ({ colorCode, direction }) => {
     // }, [canvas, colorCode])
     // can you add animation for the lines going from the star to the card
     return (
-      <div id={`container${id}`} />
+      <div id={`container${id}`} className={className} />
       // <canvas ref={canvas} width={"272px"} height={"50px"}
       //     className="bg-blue-900 border-4" />
     )

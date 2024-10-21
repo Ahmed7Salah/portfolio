@@ -4,31 +4,35 @@ import ConnectingLines from './ConnectingLines'
 import ProjectCard from './ProjectCard'
 import { useAnimationControls } from 'framer-motion';
 
-const ProjectLayout = ({ title, description, img, color, direction, date, className }) => {
+const ProjectLayout = ({ title, description, img, color, direction, date, className, link }) => {
   const controls = useAnimationControls();
   const colorVariants = {
     "white": "#fff",
     "limeGreen": "#bada55",
     "orange": "#ea580c",
-    "darkCyan": "#155e75"
+    "darkCyan": "#155e75",
+    "teal": "#319795"
   }
   const bgColorVariants = {
     "white": "bg-white/85",
     "limeGreen": "bg-[#bada55]",
     "orange": "bg-orange-600",
-    "darkCyan": "bg-cyan-800"
+    "darkCyan": "bg-cyan-800",
+    "teal": "bg-teal-500"
   }
   const textColorVariants = {
     "white": "text-white/85",
     "limeGreen": "text-[#bada55]",
     "orange": "text-orange-600",
-    "darkCyan": "text-cyan-800"
+    "darkCyan": "text-cyan-800",
+    "teal": "text-teal-500"
   }
   const textHoverColorVariants = {
     "white": "hover:text-white/85",
     "limeGreen": "hover:text-[#bada55]",
     "orange": "hover:text-orange-600",
-    "darkCyan": "hover:text-cyan-800"
+    "darkCyan": "hover:text-cyan-800",
+    "teal": "hover:text-teal-500"
   }
 
   // tried to make the color check here instead of repeating it everytime I need to specify the theme color but didn't work
@@ -56,6 +60,7 @@ const ProjectLayout = ({ title, description, img, color, direction, date, classN
                 description={description}
                 color={color}
                 bgColorVariants={bgColorVariants}
+                link={link}
                 textHoverColorVariants={textHoverColorVariants}/>
                     
         </ProjectStar>
