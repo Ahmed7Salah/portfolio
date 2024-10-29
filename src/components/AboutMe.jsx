@@ -10,11 +10,11 @@ const AboutMe = () => {
     const aboutMeTitleTyped = `About Me`
       const [aboutMeContentTyped] = useTypewriter({
         words: [`
-            I'm a passionate full-stack web developer with a proven track record of creating innovative and visually stunning websites
-            that drive results. With a deep understanding of modern web technologies, I'm dedicated to delivering high-quality solutions
-            that exceed your expectations. My expertise lies in crafting dynamic and engaging websites that not only look great but also
-            provide a seamless user experience. I'm proficient in a wide range of technologies, including React, Next.js, Node.js, Express.js,
-            and Tailwind CSS, allowing me to build custom web applications tailored to your unique requirements.
+            I'm a Computer Systems Engineering student and a full-stack MERN developer passionate about creating
+            dynamic, high-quality web applications. My technical toolkit includes React, Node.js, Express.js, MongoDB,
+            Redux, and TailwindCSS, and I thrive on learning and adapting to new technologies. Through various projects,
+            I’ve been able to showcase both my technical skills and creative problem-solving abilities, consistently aiming
+            to deliver impactful and engaging user experiences.
             `],
         typeSpeed: 5,
       })

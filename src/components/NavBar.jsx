@@ -25,7 +25,7 @@ const NavBar = () => {
           <NavItem
             name={"LinkedIn"}
             img={require("../assets/navbar/linkedin.png")}
-            url={"www.linkedin.com/in/ahmed7salah"} />
+            url={"https://www.linkedin.com/in/ahmed7salah"} />
             <NavItem
               name={"upwork.com"}
               img={require("../assets/navbar/upwork.png")}
