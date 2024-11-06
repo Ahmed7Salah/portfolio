@@ -13,23 +13,27 @@ const NavBar = () => {
         </div>
 
         {/* Right side Icons container*/}
-        <div className="flex col-start-3 justify-end space-x-3.5">
+        <div className="flex justify-end col-start-3 space-x-3">
           {/* <NavItem
             name={"Youtube"}
             img={require("../assets/navbar/youtube.png")}
             url={"https://www.youtube.com/@DigitalTurbulence"} /> */}
           <NavItem
+            name={"LinkedIn"}
+            img={require("../assets/navbar/linkedin.png")}
+            url={"https://www.linkedin.com/in/ahmed7salah"} />
+          <NavItem
             name={"GitHub"}
             img={require("../assets/navbar/github.png")}
             url={"https://github.com/Ahmed7Salah"} />
           <NavItem
-            name={"LinkedIn"}
-            img={require("../assets/navbar/linkedin.png")}
-            url={"https://www.linkedin.com/in/ahmed7salah"} />
-            <NavItem
-              name={"upwork.com"}
-              img={require("../assets/navbar/upwork.png")}
-              url={"https://www.upwork.com/freelancers/~01bc9a54adbdd47f4c?mp_source=share"} />
+            name={"StackOverflow"}
+            img={require("../assets/navbar/stackoverflow.png")}
+            url={"https://stackoverflow.com/users/22315669/ahmed-salah"} />
+          <NavItem
+            name={"Upwork"}
+            img={require("../assets/navbar/upwork.png")}
+            url={"https://www.upwork.com/freelancers/~01bc9a54adbdd47f4c?mp_source=share"} />
           {/* <NavItem
             name={"Medium"}
             img={require("../assets/navbar/medium.png")}
